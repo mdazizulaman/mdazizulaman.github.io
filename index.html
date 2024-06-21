@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohammad's Personal Webpage</title>
+    <title>Azizul's Personal Webpage</title>
     <!-- Bootstrap Icons CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <style>
@@ -95,6 +95,36 @@
         .education .university {
             flex: 1;
         }
+        .skills {
+            text-align: center;
+            margin-top: 2em;
+        }
+        .skills ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .skills li {
+            margin-bottom: 0.5em;
+        }
+        .certifications {
+            text-align: center;
+            margin-top: 2em;
+        }
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .certification-item {
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .certification-item embed {
+            width: 100%;
+            height: 300px;
+        }
         footer {
             background-color: #333;
             color: white;
@@ -182,8 +212,22 @@
         <section id="skills">
             <h2>Skills</h2>
             <h3>Technical Skills</h3>
-            <p>Programming language :</p>
+                <ul>
+                    <li>Proficient in programming languages such as Python, R, C, C++ and SQL.</li>
+                    <li>Experience with machine learning libraries and frameworks (e.g., TensorFlow, PyTorch, Scikit-learn).</li>
+                    <li>Strong understanding of statistical analysis, data mining, and predictive modeling techniques.</li>
+                    <li>Familiarity with data visualization tools (e.g., Tableau, Matplotlib, Seaborn) and big data technologies (e.g., Hadoop, Spark).</li>
+                    <li>Proficiency in data wrangling and Manipulation using Pandas and Numpy</li>
+                </ul>
+                
             <h3>Soft Skills</h3>
+            <ul>
+                <li>Communication: Effectively communicated complex findings to technical and non-technical stakeholders through clear reports and presentations.</li>
+                <li>Problem Solving: Identified and tackled complex data challenges, formulated hypotheses, and applied analytical techniques to derive actionable insights.</li>
+                <li>Teamwork and Collaboration: Collaborated with cross-functional teams including data engineers, business analysts, and domain experts to develop data-driven solutions.</li>
+                <li>Adaptability and Flexibility: Adapted to changing project requirements and technologies, continuously learning and applying new skills to enhance project efficiency and effectiveness.</li>
+                <li>Attention to Detail: Ensured data accuracy and model robustness through meticulous attention to detail, validating findings rigorously.</li>
+            </ul>
 
         </section>
         <section id="research">
@@ -198,7 +242,38 @@
 
         <section id="certifications">
             <h2>Certifications</h2>
-            <p>Your certifications will be featured here.</p>
+            <div class="certifications-grid">
+                <div class="certification-item">
+                    <embed src="./files/pandas_numpy_certification.pdf" type="application/pdf">
+                </div>
+                <div class="certification-item">
+                    <embed src="certificate2.pdf" type="application/pdf">
+                </div>
+                <div class="certification-item">
+                    <embed src="certificate3.pdf" type="application/pdf">
+                </div>
+                <div class="certification-item">
+                    <embed src="certificate4.pdf" type="application/pdf">
+                </div>
+                <div class="certification-item">
+                    <embed src="certificate5.pdf" type="application/pdf">
+                </div>
+                <div class="certification-item">
+                    <embed src="certificate6.pdf" type="application/pdf">
+                </div>
+                <div class="certification-item">
+                    <embed src="certificate7.pdf" type="application/pdf">
+                </div>
+                <div class="certification-item">
+                    <embed src="certificate8.pdf" type="application/pdf">
+                </div>
+                <div class="certification-item">
+                    <embed src="certificate9.pdf" type="application/pdf">
+                </div>
+                <div class="certification-item">
+                    <embed src="certificate10.pdf" type="application/pdf">
+                </div>
+            </div>
         </section>
 
         <section id="contact">
@@ -211,7 +286,7 @@
                 <a href="https://www.youtube.com/yourchannel" target="_blank"><i class="bi bi-youtube"></i></a>
                 <a href="https://github.com/yourusername" target="_blank"><i class="bi bi-github"></i></a>
             </div>
-            <p>You can also contact me via email: your-email@example.com</p>
+            <p>You can also contact me via email: azizulaman6789@gmail.com</p>
         </section>
     </div>
 
