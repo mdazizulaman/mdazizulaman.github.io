@@ -1,297 +1,620 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Azizul's Personal Webpage</title>
-    <!-- Bootstrap Icons CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            color: #333;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 1em 0;
-            text-align: center;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-        #profile-picture {
-            display: block;
-            margin: 2em auto;
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-        nav {
-            text-align: center;
-            margin: 2em 0;
-            display: flex;
-        }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #333;
-        }
-        section {
-            padding: 2em 0;
-            border-bottom: 1px solid #ccc;
-        }
-        .social-icons {
-            text-align: center;
-            margin-top: 1em;
-            margin-bottom: 5em;
-        }
-        .social-icons a {
-            display: inline-block;
-            margin: 0 10px;
-            color: #555;
-            font-size: 2em;
-            transition: color 0.3s ease;
-        }
-        .social-icons bi bi-facebook:hover {
-            color: #4CAF50;
-        }
-        /* Specific hover colors */
-        .social-icons a:hover .bi-facebook {
-            color: rgba(0, 81, 255, 0.89); /* Facebook hover color */
-        }
-        .social-icons a:hover .bi-instagram {
-            color: #e91e63; /* Instagram hover color (pink-red) */
-        }
-        .social-icons a:hover .bi-linkedin {
-            color: #0077b5; /* LinkedIn hover color */
-        }
-        .social-icons a:hover .bi-whatsapp {
-            color: #25d366; /* WhatsApp hover color (green) */
-        }
-        .social-icons a:hover .bi-github {
-            color: #333; /* GitHub hover color (black) */
-        }
-        .social-icons a:hover .bi-youtube {
-            color: #ff0000; /* YouTube hover color (red) */
-        }
-        .education {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 2em;
-        }
-        .education img {
-            max-width: 100px;
-            height: auto;
-            margin-right: 1em;
-        }
-        .education .university {
-            flex: 1;
-        }
-        .skills {
-            text-align: center;
-            margin-top: 2em;
-        }
-        .skills ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .skills li {
-            margin-bottom: 0.5em;
-        }
-        .certifications {
-            text-align: center;
-            margin-top: 2em;
-        }
-        .certifications-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        .certification-item {
-            background: white;
-            padding: 10px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .certification-item embed {
-            width: 100%;
-            height: 300px;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1em 0 ;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <title>MD Azizul Hoque — MRes Candidate | Macquarie University</title>
+    <meta name="description" content="MD Azizul Hoque — Master of Research Candidate at Macquarie University. Researching LLM Alignment, Low-Resource NLP, and AI for Social Good.">
+    <meta property="og:title" content="MD Azizul Hoque — MRes Candidate">
+    <meta property="og:description" content="Researching how to make large language models safer, more aligned, and accessible across low-resource languages.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Academicons for ORCID, Google Scholar -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BMRMZYVX91"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-BMRMZYVX91');
+    </script>
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="./css/style.css">
+
+
 </head>
 <body>
-    <header>
-        <h1>Welcome to Aziz's Webpage</h1>
-    </header>
 
-    <nav>
-        <a href="#about">About Me</a>
-        <a href="#myeducation">Education</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#research">Research</a>
-        <a href="#blog">Blog</a>
-        <a href="#certifications">Certifications</a>
-        <a href="#contact">Contact</a>
+    <!-- ==========================================
+         NAVIGATION
+         ========================================== -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">MA Hoque</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#collaboration">Collaboration</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-right">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <i class="bi bi-moon-fill"></i>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Open menu">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
+        </div>
     </nav>
 
-    <div class="container">
-        <section id="about">
-            <img id="profile-picture" src="./images/profile_photo.jpg" alt="Profile Picture of Mohammad">
-            <h2>About Me</h2>
-            <p>I'm MD AZIZUL HOQUE, a versatile professional with a background in both Data Analysis and Machine Learning Engineering who is committed to make an impact on human civilization through continuous skill development in various field of Artificial Intelligence. I specialize in transforming data into
-                 actionable insights and developing AI-driven solutions to solve complex business problems.
+    <!-- ==========================================
+         HERO SECTION
+         ========================================== -->
+    <section class="hero" id="hero">
+        <div class="hero-inner">
+            <div class="hero-photo">
+                <!-- PLACEHOLDER: Replace with your profile photo -->
+                <img src="./images/profile_photo.jpg" alt="MD Azizul Hoque — Profile Photo">
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-name">MD Azizul Hoque</h1>
+                <p class="hero-title">Master of Research Candidate</p>
+                <p class="hero-affiliation">School of Computing, Faculty of Science and Engineering, Macquarie University</p>
+                <p class="hero-tagline">"Researching how to make large language models safer, more aligned, and accessible across low-resource languages"</p>
+                <!-- PLACEHOLDER: Replace with your university email -->
+                <p class="hero-email"><i class="bi bi-envelope"></i> <a href="mailto:xyz@students.mq.edu.au">mdazizul.hoque@students.mq.edu.au</a></p>
+                <div class="hero-buttons">
+                    <!-- PLACEHOLDER: Add your CV PDF path -->
+                    <a href="./files/CV_Azizul_Hoque.pdf" class="btn btn-primary" target="_blank"><i class="bi bi-download"></i> Download CV</a>
+                    <!-- PLACEHOLDER: Add your Google Scholar URL -->
+                    <a href="https://scholar.google.com/citations?user=tqExTZwAAAAJ&hl=en&authuser=1" target="_blank" class="btn btn-outline"><i class="ai ai-google-scholar"></i> Google Scholar</a>
+                </div>
+                <div class="hero-links">
+                    <!-- PLACEHOLDER: Add your ORCID URL -->
+                    <a href="https://orcid.org/0009-0007-4135-3709" title="ORCID" target="_blank"><i class="ai ai-orcid"></i></a>
+                    <!-- PLACEHOLDER: Add your GitHub URL -->
+                    <a href="https://github.com/mdazizulaman" title="GitHub" target="_blank"><i class="bi bi-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         ABOUT SECTION
+         ========================================== -->
+    <section id="about">
+        <div class="container fade-in">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-text">
+                <p>
+                    I am MD Azizul Hoque, a Master of Research candidate at the
+                    <strong>School of Computing, Faculty of Science and Engineering, Macquarie University</strong>,
+                    <!-- PLACEHOLDER: Replace with your supervisor's name and profile URL -->
+                    working under the supervision of <a href="https://researchers.mq.edu.au/en/persons/usman-naseem/" target="_blank">Dr Usman Naseem</a> and <a href="https://researchers.mq.edu.au/en/persons/mark-dras/" target="_blank">Professor Mark Dras</a>.
+                </p>
+                <p>
+                    My research focuses on <strong>LLM Alignment</strong>, <strong>Low-Resource NLP</strong>, and
+                    <strong>AI for Social Good</strong>. I am passionate about ensuring that large language models are
+                    not only powerful but also safe, equitable, and accessible — particularly for communities and
+                    languages that remain underrepresented in mainstream AI development.
+                </p>
+                <p>
+                    I hold a Graduate Diploma of Research & a Bachelor of Information Technology (majoring in Artificial Intelligence) from Macquarie
+                    University and a Bachelor of Science in Computer Science and Engineering (Transferred) from the International
+                    Islamic University Chittagong. These foundations in both applied AI and core computer science
+                    drive my current research trajectory.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         RESEARCH SECTION
+         ========================================== -->
+    <section id="research">
+        <div class="container fade-in">
+            <h2 class="section-title">Research</h2>
+            <p class="research-overview">
+                <!-- PLACEHOLDER: Rewrite this overview to reflect your specific research direction -->
+                My research sits at the intersection of language model safety, multilingual NLP, and socially
+                responsible AI. I investigate methods to align large language models with human values while
+                extending their capabilities to low-resource languages, aiming to make AI technologies safer
+                and more inclusive for diverse global communities.
             </p>
-        </section>
 
-        <section id="myeducation">
-            <h2>Education</h2>
-            <div class="education">
-                <img src="./images/mq_icon.jpg" alt="University 1 Logo" style="width:96px;height:96px;">
-                <div class="university">
-                    <h3>Macquarie University</h3>
-                    <p>Bachelor's in Information Technology (Major-Artificial Intelligence)<br>Graduated: 2024</p>
+            <div class="research-areas">
+                <div class="research-card">
+                    <div class="research-card-icon"><i class="bi bi-shield-check"></i></div>
+                    <h3>LLM Alignment</h3>
+                    <!-- PLACEHOLDER: Add your specific description -->
+                    <p>Exploring techniques to ensure large language models behave in accordance with human intentions and ethical principles, focusing on safety and reliability.</p>
+                </div>
+                <div class="research-card">
+                    <div class="research-card-icon"><i class="bi bi-translate"></i></div>
+                    <h3>Low-Resource NLP</h3>
+                    <!-- PLACEHOLDER: Add your specific description -->
+                    <p>Developing and evaluating NLP methods for languages with limited digital resources (Bangla), addressing data scarcity through transfer learning and cross-lingual approaches.</p>
+                </div>
+                <div class="research-card">
+                    <div class="research-card-icon"><i class="bi bi-people"></i></div>
+                    <h3>AI for Social Good</h3>
+                    <!-- PLACEHOLDER: Add your specific description -->
+                    <p>Applying artificial intelligence to address societal challenges, ensuring technology serves underrepresented communities and promotes equitable access to information.</p>
                 </div>
             </div>
-            <div class="education">
-                <img src="./images/iiuc_logo.jpg" alt="University 2 Logo" style="width:96px;height:96px;">
-                <div class="university">
-                    <h3>International Islamic University Chittagong</h3>
-                    <p>Bachelor's in Computer Science and Engineering<br>Timeline: 2020-2022</p>
-                </div>
-            </div>
-            <div class="education">
-                <img src="./images/college_icon.jpg" alt="University 2 Logo" style="width:96px;height:96px;">
-                <div class="university">
-                    <h3>Chittagong Gov. Model School and College</h3>
-                    <p>HSC in Science<br>Graduated: 2019</p>
-                </div>
-            </div>
-            <div class="education">
-                <img src="./images/school_logo.jpg" alt="University 2 Logo" style="width:96px;height:96px;">
-                <div class="university">
-                    <h3>Kattali Nurul Haque Chowdhury High School</h3>
-                    <p>SSC in Science<br>Graduated: 2017</p>
-                </div>
-            </div>
-        </section>
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="project">
-                <h3>Project 1: Predictive Analytics on Housing Prices</h3>
-                <p>This project involves building a predictive model to estimate house prices based on various features such as location, size, and amenities. Techniques such as linear regression, decision trees, and random forests were used to achieve high accuracy.</p>
+            <div class="current-project">
+                <h3>Current Research Project</h3>
+                <P><strong>Will be updated soon</strong></P>
+                <!-- PLACEHOLDER: Replace with your actual MRes project details -->
+                <!-- <p><strong>Title:</strong> [Your MRes Research Title]</p>
+                <p>[Brief description of the problem you're investigating, your approach, and the expected contribution to the field.]</p>
+                <div class="project-meta"> -->
+                    <!-- PLACEHOLDER: Replace with your supervisor's name and URL -->
+                    <!-- <span><i class="bi bi-person"></i> <strong>Supervisor:</strong> <a href="#">[Supervisor Name]</a></span> -->
+                    <!-- PLACEHOLDER: Replace with your lab/group name -->
+                    <!-- <span><i class="bi bi-building"></i> <strong>Lab:</strong> [Research Group Name]</span>
+                    <span><i class="bi bi-calendar3"></i> <strong>Timeline:</strong> 2025 — Present</span>
+                </div> -->
             </div>
-            <div class="project">
-                <h3>Project 2: Sentiment Analysis on Social Media</h3>
-                <p>In this project, I analyzed social media data to determine the sentiment of posts regarding a particular topic. Natural Language Processing (NLP) techniques were employed to preprocess the data, and machine learning algorithms like logistic regression and SVM were used for classification.</p>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         PUBLICATIONS SECTION
+         ========================================== -->
+    <section id="publications">
+        <div class="container fade-in">
+            <h2 class="section-title">Publications</h2>
+            <p class="section-subtitle">Selected peer-reviewed publications and works in progress.</p>
+
+            <div class="pub-category">
+                <h3>Published / Accepted</h3>
+
+                <!-- PLACEHOLDER: Replace with your actual publications in APA format -->
+                <div class="pub-item">
+                    <p class="pub-citation">
+                        Kulahara, M., <span class="pub-author-highlight">Hoque, M. A.</span>, et al. (2025).
+                        A CNN-Based Framework for Geometric Alignment of Historical and Satellite Imagery. 
+                        <em>IEEE Access</em>, 13, 132259–132268. 
+                        <a href="https://doi.org/10.1109/access.2025.3589497" target="_blank" rel="noopener noreferrer">https://doi.org/10.1109/access.2025.3589497</a>
+                    </p>
+                    <div class="pub-bottom">
+                        <span class="pub-badge published">Journal Article</span>
+                        <!-- PLACEHOLDER: Add actual links -->
+                        <a href="https://doi.org/10.1109/access.2025.3589497" class="pub-link" target="_blank">PDF</a>
+                        <a href="#" class="pub-link" target="_blank">Code</a>
+                    </div>
+                </div>
+
+                <!-- PLACEHOLDER: Add more published papers as needed -->
+                <div class="pub-item">
+                    <p class="pub-citation">
+                        Govindarajan, V., <span class="pub-author-highlight">Hoque, M. A.</span>, et al. (2025). 
+                        MAGIC-Enhanced Keyword Prompting for Zero-Shot Audio Captioning with CLIP Models. 
+                        In <em>Proceedings of the 26th International Conference on Web Information Systems Engineering (WISE 2025), CORE-B</em>.
+                    </p>
+                    <div class="pub-bottom">
+                        <span class="pub-badge published">Conference Paper</span>
+                        <a href="https://arxiv.org/abs/2509.12591" class="pub-link" target="_blank" rel="noopener noreferrer">PDF</a>
+                        <a href="#" class="pub-link" target="_blank">Code</a>
+                    </div>
+                </div>
+
+                <div class="pub-item">
+                    <p class="pub-citation">
+                        Gemelli, S., Di Cristina, G., Zhang, Y., <span class="pub-author-highlight">Hoque, M. A.</span>, et al. (2026). 
+                        Beyond Fake News Detection: A Community-based Study of the Multicultural Nature of Information Disorder. 
+                        In <em>Proceedings of the 15th Language Resources and Evaluation Conference (LREC 2026)</em>.
+                    </p>
+                    <div class="pub-bottom">
+                        <span class="pub-badge published">Conference Paper</span>
+                        <a href="#" class="pub-link" target="_blank" rel="noopener noreferrer">PDF</a>
+                        <a href="#" class="pub-link" target="_blank">Code</a>
+                    </div>
+                </div>
+        </div>
+
+
+            <div class="pub-category">
+                <h3>In Preparation / Under Review</h3>
+
+                <!-- PLACEHOLDER: Replace with your actual in-progress works -->
+                <div class="pub-item">
+                    <p class="pub-citation">
+                        Kashyap, G. S., <span class="pub-author-highlight">Hoque, M. A.</span>, Srivastava, K., Jalan, P., Kar, S., & Naseem, U. (2025).
+                        How Far Can Current Tokenizers Go in Bangla? A Benchmark and a Morphology-Aware Solution. 
+                        
+                    </p>
+                    <div class="pub-bottom">
+                        <span class="pub-badge review">Under Review</span>
+                    </div>
+                </div>
+
+                <div class="pub-item">
+                    <p class="pub-citation">
+                        Kashyap, G. S., <span class="pub-author-highlight">Hoque, M. A.</span>, Dras, M., & Naseem, U. (2025).
+                        The Right Tokens for the Right Languages? Evaluating Tokenization Algorithms For Non-Latin & Low-Resource Languages.
+                    </p>
+                    <div class="pub-bottom">
+                        <span class="pub-badge review">Under Review</span>
+                        <!-- <a href="#" class="pub-link" target="_blank">Preprint</a> -->
+                        <!-- <a href="#" class="pub-link" target="_blank">Code</a> -->
+                    </div>
+                </div>
             </div>
-            <div class="project">
-                <h3>Project 3: Customer Segmentation for E-commerce</h3>
-                <p>This project focused on segmenting customers based on their purchasing behavior. Clustering techniques such as K-means and hierarchical clustering were utilized to identify distinct customer groups, which helped in targeting marketing strategies more effectively.</p>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         COLLABORATION SECTION
+         ========================================== -->
+    <section id="collaboration">
+        <div class="container fade-in">
+            <h2 class="section-title">Research Collaboration</h2>
+            <p class="collab-statement">
+                I am always open to research collaborations in LLM Alignment, Low-Resource NLP, and AI for Social Good.
+                If your work intersects with these areas and you're interested in exploring joint research opportunities,
+                I would love to hear from you.
+            </p>
+
+            <h3 style="font-family: var(--font-body); font-weight: 600; font-size: 1rem; margin-bottom: 0.8em;">Areas of Interest</h3>
+            <div class="collab-areas">
+                <!-- PLACEHOLDER: Replace or add your specific collaboration topics -->
+                <span class="collab-area-tag">LLM Safety & Alignment</span>
+                <span class="collab-area-tag">Cross-lingual Transfer Learning</span>
+                <span class="collab-area-tag">Low-Resource Language Technologies</span>
+                <span class="collab-area-tag">Responsible AI</span>
             </div>
-        </section>
 
-        <section id="skills">
-            <h2>Skills</h2>
-            <h3>Technical Skills</h3>
-                <ul>
-                    <li>Proficient in programming languages such as Python, R, C, C++ and SQL.</li>
-                    <li>Experience with machine learning libraries and frameworks (e.g., TensorFlow, PyTorch, Scikit-learn).</li>
-                    <li>Strong understanding of statistical analysis, data mining, and predictive modeling techniques.</li>
-                    <li>Familiarity with data visualization tools (e.g., Tableau, Matplotlib, Seaborn) and big data technologies (e.g., Hadoop, Spark).</li>
-                    <li>Proficiency in data wrangling and Manipulation using Pandas and Numpy</li>
-                </ul>
-                
-            <h3>Soft Skills</h3>
-            <ul>
-                <li>Communication: Effectively communicated complex findings to technical and non-technical stakeholders through clear reports and presentations.</li>
-                <li>Problem Solving: Identified and tackled complex data challenges, formulated hypotheses, and applied analytical techniques to derive actionable insights.</li>
-                <li>Teamwork and Collaboration: Collaborated with cross-functional teams including data engineers, business analysts, and domain experts to develop data-driven solutions.</li>
-                <li>Adaptability and Flexibility: Adapted to changing project requirements and technologies, continuously learning and applying new skills to enhance project efficiency and effectiveness.</li>
-                <li>Attention to Detail: Ensured data accuracy and model robustness through meticulous attention to detail, validating findings rigorously.</li>
-            </ul>
+            <div class="collab-people">
+                <h3>Collaborators & Affiliations</h3>
+                <!-- PLACEHOLDER: Add your supervisor, lab members, collaborators -->
+                <p><strong>Usman Naseem</strong> — Lecturer (NLP), School of Computing, Macquarie University</p>
+                <p><strong>Mark Dras</strong> — Professor (NLP), School of Computing, Macquarie University</p>
+                <p><strong>Simona Frenda</strong> — Research Associate, School of Mathematical & Computer Sciences, Heriot-Watt University</p>
+                <p><strong>Marco A. Stranisci</strong> — Computer Science, Università degli Studi di Torino</p>
+                <p><strong>Gautam Siddharth Kashyap</strong> — Phd Scholar, School of Computing, Macquarie University</p>
+                <p><strong>Yiran Zhang</strong> — Phd Scholar, University of Western Australia</p>
+                <p><strong>Baizid Kamruzzaman</strong> — Graduate, Computer Science & Engineering, International Islamic University Chittagong</p>
+                <p><strong>SocialNLP Lab</strong> — Macquarie University</p>
+            </div>
 
-        </section>
-        <section id="research">
-            <h2>Research Articles</h2>
-            <p>Information about your research areas will go here.</p>
-        </section>
+            <!-- PLACEHOLDER: Replace with your university email -->
+            <a href="mdazizul.hoque@students.mq.edu.au" class="btn-accent">
+                <i class="bi bi-envelope"></i> Get in Touch
+            </a>
+        </div>
+    </section>
 
-        <section id="blog">
-            <h2>Blog</h2>
-            <p>Your blog posts will be featured here.</p>
-        </section>
+    <!-- ==========================================
+         PROJECTS SECTION
+         ========================================== -->
+    <section id="projects">
+        <div class="container fade-in">
+            <h2 class="section-title">Projects</h2>
+            <p class="section-subtitle">Selected data science and machine learning projects.</p>
 
-        <section id="certifications">
-            <h2>Certifications</h2>
-            <div class="certifications-grid">
-                <div class="certification-item">
-                    <embed src="./files/pandas_numpy_certification.pdf" type="application/pdf">
+            <div class="projects-grid">
+                <!-- Data Science Portfolio Card -->
+                <div class="project-card portfolio-card">
+                    <div class="project-info">
+                        <h3><i class="bi bi-collection"></i> Data Science Portfolio</h3>
+                        <p>A collection of data science projects showcasing exploratory analysis, modelling, and visualization skills.</p>
+                    </div>
+                    <div class="portfolio-links">
+                        <!-- PLACEHOLDER: Add your actual portfolio links -->
+                        <a href="https://github.com/mdazizulaman/COMP2200_Portfolio_1" target="_blank"><i class="bi bi-folder2-open"></i> Portfolio 1</a>
+                        <a href="https://github.com/mdazizulaman/COMP_2200_Portfolio_2" target="_blank"><i class="bi bi-folder2-open"></i> Portfolio 2</a>
+                        <a href="https://github.com/mdazizulaman/COMP_2200_Portfolio_3" target="_blank"><i class="bi bi-folder2-open"></i> Portfolio 3</a>
+                        <a href="https://github.com/mdazizulaman/COMP_2200_Portfolio_4" target="_blank"><i class="bi bi-folder2-open"></i> Portfolio 4</a>
+                    </div>
                 </div>
-                <div class="certification-item">
-                    <embed src="certificate2.pdf" type="application/pdf">
+
+                <!-- Image Classification Project -->
+                <div class="project-card">
+                    <div class="project-thumb">
+                        <!-- PLACEHOLDER: Add a project thumbnail image -->
+                        <i class="bi bi-image"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Image Classification — Intel Image Dataset</h3>
+                        <p>Developed a multi-class image classification system using custom CNN architectures, hyperparameter tuning, and transfer learning with MobileNet. Includes comparative evaluation to identify the most effective model.</p>
+                        <div class="project-links">
+                            <!-- PLACEHOLDER: Add your actual project GitHub link -->
+                            <a href="https://github.com/mdazizulaman/COMP3420_Task_2" class="project-link" target="_blank"><i class="bi bi-github"></i> GitHub</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="certification-item">
-                    <embed src="certificate3.pdf" type="application/pdf">
+
+                <!-- Credit Risk Classification Project -->
+                <div class="project-card">
+                    <div class="project-thumb">
+                        <!-- PLACEHOLDER: Add a project thumbnail image -->
+                        <i class="bi bi-image"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Credit Risk Classification</h3>
+                        <p>Built a credit risk classification system using Logistic Regression, KNN, Random Forest, and Multi-Layer Perceptron to predict loan default, with comparative model evaluation.</p>
+                        <div class="project-links">
+                            <!-- PLACEHOLDER: Add your actual project GitHub link -->
+                            <a href="https://github.com/mdazizulaman/COMP2400_Task" class="project-link" target="_blank"><i class="bi bi-github"></i> GitHub</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="certification-item">
-                    <embed src="certificate4.pdf" type="application/pdf">
+
+                <!-- Placeholder cards for future projects -->
+                <div class="project-card placeholder-card">
+                    <div class="project-thumb"><i class="bi bi-plus-lg"></i></div>
+                    <div class="project-info">
+                        <h3>Coming Soon</h3>
+                        <p>More projects will be added here.</p>
+                    </div>
                 </div>
-                <div class="certification-item">
-                    <embed src="certificate5.pdf" type="application/pdf">
-                </div>
-                <div class="certification-item">
-                    <embed src="certificate6.pdf" type="application/pdf">
-                </div>
-                <div class="certification-item">
-                    <embed src="certificate7.pdf" type="application/pdf">
-                </div>
-                <div class="certification-item">
-                    <embed src="certificate8.pdf" type="application/pdf">
-                </div>
-                <div class="certification-item">
-                    <embed src="certificate9.pdf" type="application/pdf">
-                </div>
-                <div class="certification-item">
-                    <embed src="certificate10.pdf" type="application/pdf">
+
+                <div class="project-card placeholder-card">
+                    <div class="project-thumb"><i class="bi bi-plus-lg"></i></div>
+                    <div class="project-info">
+                        <h3>Coming Soon</h3>
+                        <p>More projects will be added here.</p>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <div class="social-icons">
-                <a href="https://www.facebook.com/yourusername" target="_blank"><i class="bi bi-facebook"></i></a>
-                <a href="https://www.instagram.com/yourusername" target="_blank"><i class="bi bi-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/yourusername" target="_blank"><i class="bi bi-linkedin"></i></a>
-                <a href="https://wa.me/yourphonenumber" target="_blank"><i class="bi bi-whatsapp"></i></a>
-                <a href="https://www.youtube.com/yourchannel" target="_blank"><i class="bi bi-youtube"></i></a>
-                <a href="https://github.com/yourusername" target="_blank"><i class="bi bi-github"></i></a>
+    <!-- ==========================================
+         EDUCATION SECTION
+         ========================================== -->
+    <section id="education">
+        <div class="container fade-in">
+            <h2 class="section-title">Education</h2>
+
+            <!-- Macquarie University — Grouped -->
+            <div class="edu-group">
+                <img src="./images/mq_icon.jpg" alt="Macquarie University Logo" class="edu-logo">
+                <div class="edu-degrees">
+                    <div class="edu-uni-name">Macquarie University</div>
+
+                    <div class="edu-entry">
+                        <div class="edu-degree">Master of Research</div>
+                        <div class="edu-timeline">Current</div>
+                        <!-- PLACEHOLDER: Add awards if any -->
+                    </div>
+
+                    <div class="edu-entry">
+                        <div class="edu-degree">Graduate Diploma of Research</div>
+                        <div class="edu-timeline">Jan 2025 — Dec 2025</div>
+                        <!-- PLACEHOLDER: Add awards if any -->
+                    </div>
+
+                    <div class="edu-entry">
+                        <div class="edu-degree">Bachelor of Information Technology (Major — Artificial Intelligence)</div>
+                        <div class="edu-timeline">Graduated 2024</div>
+                        <!-- PLACEHOLDER: Add awards if any -->
+                    </div>
+                </div>
             </div>
-            <p>You can also contact me via email: azizulaman6789@gmail.com</p>
-        </section>
+
+            <!-- IIUC -->
+            <div class="edu-group">
+                <img src="./images/iiuc_logo.jpg" alt="IIUC Logo" class="edu-logo">
+                <div class="edu-degrees">
+                    <div class="edu-uni-name">International Islamic University Chittagong</div>
+                    <div class="edu-entry">
+                        <div class="edu-degree">Bachelor of Science in Computer Science and Engineering</div>
+                        <div class="edu-timeline">2020 — 2022</div>
+                        <!-- PLACEHOLDER: Add awards if any -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Awards & Honours -->
+            <div class="awards-section">
+                <h3><i class="bi bi-trophy"></i> Awards & Honours</h3>
+                <!-- PLACEHOLDER: Add your actual awards -->
+                <div class="award-item">iMQRES MRES — Macquarie University, 2026</div>
+                <!-- <div class="award-item">[Award Name] — [Issuing Organization], [Year]</div>
+                <div class="award-item">[Award Name] — [Issuing Organization], [Year]</div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SKILLS SECTION
+         ========================================== -->
+    <section id="skills">
+        <div class="container fade-in">
+            <h2 class="section-title">Skills</h2>
+
+            <div class="skills-category">
+                <h3>Technical Skills</h3>
+
+                <div class="skills-group">
+                    <div class="skills-group-label">Programming</div>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">R</span>
+                        <span class="tag">C</span>
+                        <span class="tag">C++</span>
+                        <span class="tag">SQL</span>
+                    </div>
+                </div>
+
+                <div class="skills-group">
+                    <div class="skills-group-label">ML / AI Frameworks</div>
+                    <div class="tags">
+                        <span class="tag">TensorFlow</span>
+                        <span class="tag">PyTorch</span>
+                        <span class="tag">Scikit-learn</span>
+                    </div>
+                </div>
+
+                <div class="skills-group">
+                    <div class="skills-group-label">Data Science</div>
+                    <div class="tags">
+                        <span class="tag">Pandas</span>
+                        <span class="tag">NumPy</span>
+                        <span class="tag">Matplotlib</span>
+                        <span class="tag">Seaborn</span>
+                        <span class="tag">Tableau</span>
+                    </div>
+                </div>
+
+                <div class="skills-group">
+                    <div class="skills-group-label">Big Data</div>
+                    <div class="tags">
+                        <span class="tag">Hadoop</span>
+                        <span class="tag">Spark</span>
+                    </div>
+                </div>
+
+                <div class="skills-group">
+                    <div class="skills-group-label">Research Tools</div>
+                    <div class="tags">
+                        <span class="tag">LaTeX</span>
+                        <span class="tag">Git</span>
+                        <span class="tag">Overleaf</span>
+                    </div>
+                </div>
+
+                <div class="skills-group">
+                    <div class="skills-group-label">NLP</div>
+                    <div class="tags">
+                        <!-- PLACEHOLDER: Update with tools you actually use -->
+                        <span class="tag">Hugging Face</span>
+                        <span class="tag">NLTK</span>
+                        <span class="tag">SpaCy</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3>Soft Skills</h3>
+                <div class="soft-skills-tags">
+                    <div class="tags">
+                        <span class="tag">Communication</span>
+                        <span class="tag">Problem Solving</span>
+                        <span class="tag">Teamwork</span>
+                        <span class="tag">Adaptability</span>
+                        <span class="tag">Attention to Detail</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         CONTACT SECTION
+         ========================================== -->
+    <section id="contact">
+        <div class="container fade-in">
+            <h2 class="section-title">Contact</h2>
+            <p class="section-subtitle">Feel free to reach out for research discussions, collaboration, or any questions.</p>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <div class="contact-email">
+                        <i class="bi bi-envelope"></i>
+                        <!-- PLACEHOLDER: Replace with your university email -->
+                        <a href="mailto:your.email@mq.edu.au">your.email@mq.edu.au</a>
+                    </div>
+
+                    <div class="contact-socials">
+                        <!-- PLACEHOLDER: Add your actual URLs -->
+                        <a href="https://scholar.google.com/citations?user=tqExTZwAAAAJ&hl=en&authuser=1" title="Google Scholar" target="_blank"><i class="ai ai-google-scholar"></i></a>
+                        <a href="https://orcid.org/0009-0007-4135-3709" title="ORCID" target="_blank"><i class="ai ai-orcid"></i></a>
+                        <a href="https://github.com/mdazizulaman" title="GitHub" target="_blank"><i class="bi bi-github"></i></a>
+                        <a href="https://www.linkedin.com/in/md-azizul-hoque-574963301/" title="LinkedIn" target="_blank"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" title="Facebook" target="_blank"><i class="bi bi-facebook"></i></a>
+                        <a href="#" title="YouTube" target="_blank"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3>Send a Message</h3>
+                    <!-- PLACEHOLDER: Replace YOUR_FORMSPREE_ID with your actual Formspree form ID -->
+                    <!-- Sign up at https://formspree.io and create a form to get your ID -->
+                    <form action="https://formspree.io/f/xzdjpreg" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="form-submit"><i class="bi bi-send"></i> Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FOOTER
+         ========================================== -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-socials">
+                <!-- PLACEHOLDER: Add your actual URLs (same as contact section) -->
+                <a href="#" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+                <a href="#" title="ORCID"><i class="ai ai-orcid"></i></a>
+                <a href="#" title="GitHub"><i class="bi bi-github"></i></a>
+                <a href="#" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                <a href="#" title="Facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" title="YouTube"><i class="bi bi-youtube"></i></a>
+            </div>
+            <div class="footer-text">
+                &copy; <span id="currentYear"></span> MD Azizul Hoque — Macquarie University<br>
+                <!-- PLACEHOLDER: Update this date whenever you modify the site -->
+                Last updated: March 2025<br>
+                Built with <span class="footer-heart">&hearts;</span> by Azizul
+            </div>
+
+            <p style="font-size: 0.75rem; opacity: 0.5; margin-top: 1em;">
+                This site uses Google Analytics. 
+                <a href="https://www.google.com/policies/privacy/partners/" target="_blank" style="color: rgba(255,255,255,0.6);">
+                    Learn how Google uses your data
+                </a>
+            </p>
+            <a href="#hero" class="back-to-top"><i class="bi bi-arrow-up-circle"></i> Back to top</a>
+        </div>
+    </footer>
+
+    <!-- ==========================================
+         VISITOR COUNTER (Floating Badge)
+         ========================================== -->
+    <div class="visitor-badge">
+        <i class="bi bi-eye"></i>
+        <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fmdazizulaman.github.io&count_bg=%231B3A5C&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=visitors&edge_flat=true" alt="Visitor Count">
     </div>
 
-    <footer>
-        <p>&copy; 2024 Mohammad</p>
-    </footer>
+    <!-- ==========================================
+         JAVASCRIPT
+         ========================================== -->
+    <script src="./js/main.js"></script>
+
 </body>
 </html>
